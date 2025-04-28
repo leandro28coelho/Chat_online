@@ -20,7 +20,7 @@ def index():
 
 
     else:
-        return render_template('index.html')
+        return render_template('index.html', nick='leandro')
 
 
 

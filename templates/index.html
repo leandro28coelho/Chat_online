@@ -11,6 +11,7 @@
 <div class="chat-container">
     <div class="messages" id="messages"></div>
     <div class="input-container">
+        <input type="text" id="nameInput" value="{{nick}}">
         <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
         <button onclick="sendMessage()">Enviar</button>
     </div>
@@ -18,16 +19,20 @@
 
 <script>
     function sendMessage() {
-    const input = document.getElementById('messageInput');
+    const nameInput = document.getElementById('nameInput');
+    const messageInput = document.getElementById('messageInput');
     const messages = document.getElementById('messages');
-    const message = input.value.trim();
+    const name = nameInput.value.trim();
+    const message = messageInput.value.trim();
 
-    if (message) {
+    if (name && message) {
     const messageElement = document.createElement('div');
-    messageElement.textContent = message;
+    messageElement.textContent = `${name}: ${message}`;
     messages.appendChild(messageElement);
-    input.value = '';
+    messageInput.value = '';
     messages.scrollTop = messages.scrollHeight;
+    } else {
+    alert('Informe seu nome');
     }
     }
 </script>
