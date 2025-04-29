@@ -1,0 +1,30 @@
+
+body {
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+ height: 90vh;
+ margin: 0;
+ }
+
+table {
+ width: 100%;
+ border-collapse: collapse;
+ }
+ th, td {
+ border: 1px solid black;
+ padding: 8px;
+ text-align: center;
+ }
+ th {
+ background-color: #f2f2f2;
+ }
+ input[type="text"] {
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            width: 300px;
+                        }
+                        button {
+                            padding: 10px 20px;
+                            cursor: pointer;
+                        }
