@@ -52,7 +52,6 @@ def bate_papo(nome, texto):
 
 @app.route('/mensagem', methods=['GET'])
 def mensagem():
-    print('rodou')
     return render_template('mensagem.html', registros=historico())
 
 
